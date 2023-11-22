@@ -7,6 +7,64 @@
   --background-rgb: 255, 255, 255;
 }
 
+@media (min-width: 640px) {
+  .index-nav {
+    :nth-child(1) {
+      /* width: 872px; */
+      width: 58.6%;
+    }
+    :nth-child(2) {
+      width: 63.1%;
+    }
+    :nth-child(3) {
+      width: 61.5%;
+    }
+    :nth-child(4) {
+      width: 67.2%;
+    }
+
+    > a {
+      padding-right: 25%;
+      transition-timing-function: ease-in-out;
+      transition-duration: 300ms;
+      transition-property: width color, background-color;
+    }
+
+    :hover {
+      width: 70%;
+      animation: flash normal 300ms;
+      transition-timing-function: cubic-bezier(0.41, 1.95, 0.45, 1);
+    }
+  }
+}
+
+@keyframes flash {
+  0% {
+    background-color: white;
+    color: white;
+  }
+  100% {
+  }
+}
+
+@-webkit-keyframes flash {
+  0% {
+    background-color: white;
+    color: white;
+  }
+  100% {
+  }
+}
+
+@keyframes bounce-grow {
+  90% {
+    width: 72%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
 body {
   color: rgb(var(--foreground-rgb));
   background: rgb(var(--background-rgb));

@@ -16,6 +16,9 @@ const config: Config = {
       },
       colors: {
         'leik-red': '#E99090',
+        'leik-blue': '#86A7FA',
+        'leik-gray': '#D9D9D9',
+        'leik-yellow': '#F2D396',
       },
     },
     fontFamily: {
