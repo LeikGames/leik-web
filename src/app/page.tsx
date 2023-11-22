@@ -11,7 +11,7 @@ export default function Home() {
         <IndexNavButton className="bg-leik-gray">Interaktivt</IndexNavButton>
         <IndexNavButton className="bg-leik-yellow">Undervisning</IndexNavButton>
       </div>
-      :==0
+      <p>{"8======D~~~~~~~ <----- That's a rocket ship"}</p>
     </main>
   );
 }
