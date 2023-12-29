@@ -11,7 +11,6 @@ export default function Home() {
         <IndexNavButton className="bg-leik-gray">Interaktivt</IndexNavButton>
         <IndexNavButton className="bg-leik-yellow">Undervisning</IndexNavButton>
       </div>
-      :==0
     </main>
   );
 }

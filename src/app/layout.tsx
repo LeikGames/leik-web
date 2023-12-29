@@ -26,9 +26,14 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${josefinSans.variable} ${jost.variable}`}>
       <body>
+        <div className="prose-xl h-screen flex items-center justify-center">
+          <p>🔧 Leik Games is under construction 🔧</p>
+        </div>
+      </body>
+      {/* <body>
         <Navbar hideNav />
         {children}
-      </body>
+      </body> */}
     </html>
   );
 }
