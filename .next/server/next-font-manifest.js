@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST='{"pages":{},"app":{"/Users/oliverandreasthunaes/Dev/leik-web/src/app/layout":["static/media/a3a474206a856479-s.p.woff2","static/media/4c472ffaefe8ebfa-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}';

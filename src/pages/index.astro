@@ -1,0 +1,62 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<Layout title="Leik Games">
+  <main>
+    <h1 class="mt-20 mb-10 text-center text-4xl font-['Josefin_Sans_Variable']">
+      LEIK<br />GAMES
+    </h1>
+    <div class="flex justify-items-center">
+      <Card
+        titleName="Camilla"
+        qualiItems={["game design", "2D art"]}
+        email="camilla@leik.games"
+        image="/camillaWeb.png"
+      />
+      <Card
+        titleName="Oliver"
+        qualiItems={["programming", "tuition"]}
+        email="oliver@leik.games"
+        image="/oliverWeb.png"
+      />
+    </div>
+    <div class="mt-20 flex items-center flex-col">
+      <Icon
+        name="material-symbols:mail-sharp"
+        class="text-6xl text-red-500 mb-2"
+      />
+      <a
+        href="mailto:hello@leik.games"
+        class="text-blue-600 visited:text-purple-600 max-w-24 text-lg text-center"
+        >hello@leik.games</a
+      >
+    </div>
+
+    <div class="my-20 flex items-center flex-col">
+      <Icon
+        name="material-symbols:location-on"
+        class="text-6xl text-amber-500 mb-2"
+      />
+      <a
+        href="https://maps.app.goo.gl/BoLTFi2WSAYsCvou5"
+        class="text-blue-600 visited:text-purple-600 max-w-24 text-lg text-center"
+        >Nygaardsgata 33 A 1607 Fredrikstad</a
+      >
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    margin: auto;
+    padding: 1rem;
+    width: 800px;
+    max-width: calc(100% - 2rem);
+    color: black;
+    font-size: 12pt;
+    line-height: 1.4;
+  }
+</style>
