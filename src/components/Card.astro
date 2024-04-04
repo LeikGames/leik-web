@@ -2,21 +2,16 @@
 interface Props {
   titleName: string;
   qualiItems: Array<string>;
-  email: string;
   image: string;
 }
 
-const { titleName, qualiItems, email, image } = Astro.props;
+const { titleName, qualiItems, image } = Astro.props;
 ---
 
-<div class="bg-white text-center text-lg">
-  <img src={image} />
-  <h2 class="">{titleName}</h2>
+<div class="bg-white text-center text-xl">
+  <img class="mt-4" src={image} />
+  <h2>{titleName}</h2>
   <ul>
     {qualiItems.map((item) => <li>{item}</li>)}
-    <li>
-      <a href={"mailto:" + email} class="text-blue-600 visited:text-purple-600"
-        >{email}</a>
-    </li>
   </ul>
 </div>
