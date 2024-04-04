@@ -1,0 +1,17 @@
+---
+interface Props {
+  titleName: string;
+  qualiItems: Array<string>;
+  image: string;
+}
+
+const { titleName, qualiItems, image } = Astro.props;
+---
+
+<div class="bg-white text-center text-xl">
+  <img class="mt-4" src={image} />
+  <h2>{titleName}</h2>
+  <ul>
+    {qualiItems.map((item) => <li>{item}</li>)}
+  </ul>
+</div>
