@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Card from "../components/Card.astro";
-import { Icon } from "astro-icon/components";
+import Social from "../components/Social.astro";
 ---
 
 <Layout title="Leik Games">
@@ -21,29 +21,24 @@ import { Icon } from "astro-icon/components";
         image="/oliverWeb.png"
       />
     </div>
-    <div class="mt-20 flex items-center flex-col">
-      <Icon
-        name="material-symbols:mail-sharp"
-        class="text-6xl text-red-500 mb-2"
-      />
-      <a
-        href="mailto:hello@leik.games"
-        class="text-blue-600 visited:text-purple-600 max-w-24 text-xl text-center"
-        >hello@leik.games</a
-      >
-    </div>
+        <div class="my-20 flex flex-row justify-around">
 
-    <div class="my-20 flex items-center flex-col">
-      <Icon
-        name="material-symbols:location-on"
-        class="text-6xl text-amber-500 mb-2"
-      />
-      <a
-        href="https://maps.app.goo.gl/BoLTFi2WSAYsCvou5"
-        class="text-blue-600 visited:text-purple-600 max-w-24 text-xl text-center"
-        >Nygaardsgata 33 A 1607 Fredrikstad</a
-      >
-    </div>
+            <Social icon="material-symbols:mail-sharp" href="mailto:hello@leik.games" color="text-black">
+                hello@leik.games
+            </Social>
+
+            <Social icon="material-symbols:location-on" href="https://maps.app.goo.gl/BoLTFi2WSAYsCvou5" color="text-black">
+                Nygaardsgata 33 A 1607 Fredrikstad
+            </Social>
+
+            <Social icon="carbon:logo-discord" href="https://discord.gg/MVjVFpv3" color="text-black">
+                Join our Discord
+            </Social>
+
+            <Social icon="mdi:blog" href="https://forums.tigsource.com/index.php?topic=75659.0" color="text-black">
+                Dicetris devlog
+            </Social>
+        </div>
   </main>
 </Layout>
 
