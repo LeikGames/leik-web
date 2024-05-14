@@ -9,16 +9,35 @@ import Social from "../components/Social.astro";
     <h1 class="mt-20 mb-10 text-center text-4xl font-['Josefin_Sans_Variable']">
       LEIK<br />GAMES
     </h1>
-    <div class="flex flex-col md:flex-row justify-items-center">
+    <div class="flex flex-col md:flex-row justify-between">
       <Card
         titleName="Camilla"
         qualiItems={["game design", "2D art"]}
-        image="/camillaWeb.png"
+        image="/camillaLeikWeb.png"
       />
       <Card
         titleName="Oliver"
-        qualiItems={["programming", "tuition"]}
-        image="/oliverWeb.png"
+        qualiItems={["game design", "programming"]}
+        image="/oliverLeikWeb.png"
+      />
+    </div>
+    <div class="flex flex-col md:flex-row justify-between mt-10">
+      <Card
+        titleName="Jaran"
+        qualiItems={["3D modeling/animation"]}
+        image="/jaranLeikWeb.png"
+      />
+      <Card
+        titleName="Anniken"
+        qualiItems={["3D modeling"]}
+        image="/annikenLeikWeb.png"
+      />
+    </div>
+    <div class="flex flex-col md:flex-row justify-center mt-10">
+      <Card
+        titleName="Simen"
+        qualiItems={["audio", "music"]}
+        image="/simenLeikWeb.png"
       />
     </div>
         <div class="my-20 flex flex-row justify-around">
