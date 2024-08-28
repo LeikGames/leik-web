@@ -1,17 +1,17 @@
 ---
 interface Props {
-  titleName: string;
-  qualiItems: Array<string>;
-  image: string;
+    titleName: string
+    qualiItems: Array<string>
+    image: string
 }
 
-const { titleName, qualiItems, image } = Astro.props;
+const { titleName, qualiItems, image } = Astro.props
 ---
 
-<div class="bg-white text-center text-2xl">
-  <img class="mt-2 max-w-80" src={image} />
-  <h2 class="mb-2 text-3xl">{titleName}</h2>
-  <ul>
-    {qualiItems.map((item) => <li>{item}</li>)}
-  </ul>
+<div class="text-center text-2xl">
+    <img class="mt-2 max-w-80" src={image} />
+    <h2 class="mb-2 text-3xl">{titleName}</h2>
+    <ul>
+        {qualiItems.map((item) => <li>{item}</li>)}
+    </ul>
 </div>

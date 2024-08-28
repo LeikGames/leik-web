@@ -1,32 +1,43 @@
 ---
-import "@fontsource/farsan";
-import "@fontsource-variable/josefin-sans";
+import '@fontsource/farsan'
+import '@fontsource-variable/josefin-sans'
+
+import Navbar from '../components/Navbar.astro'
 
 interface Props {
-  title: string;
-  description?: string;
-  image?: string;
+    title: string
+    description?: string
+    image?: string
 }
 
-const {
-  title,
-  description = "Leik Games are making games in Norway",
-  image,
-} = Astro.props;
+const { title, description = 'Leik Games are making games in Norway', image } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <meta property="og:image" content={image} />
-    <title>{title}</title>
-  </head>
-  <body class="min-h-screen">
-    <slot />
-  </body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="description" content={description} />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <meta name="generator" content={Astro.generator} />
+        <meta property="og:image" content={image} />
+        <title>{title}</title>
+    </head>
+    <body class="min-h-screen">
+        <div id="bg-div"></div>
+        <Navbar />
+        <slot />
+    </body>
 </html>
+
+<style>
+    #bg-div {
+        position: fixed;
+        width: 100vw;
+        height: 75vh;
+        z-index: -10;
+        background: rgb(232, 239, 152);
+        background: linear-gradient(180deg, rgba(232, 239, 152, 1) 0%, rgba(255, 255, 255, 1) 100%);
+    }
+</style>

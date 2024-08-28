@@ -1,74 +1,81 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
-import Social from "../components/Social.astro";
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import Social from '../components/Social.astro'
 ---
 
 <Layout title="Leik Games">
-  <main>
-    <h1 class="mt-20 mb-10 text-center text-4xl font-['Josefin_Sans_Variable']">
-      LEIK<br />GAMES
-    </h1>
-    <div class="flex flex-col md:flex-row justify-between">
-      <Card
-        titleName="Camilla"
-        qualiItems={["game design", "2D art"]}
-        image="/camillaLeikWeb.png"
-      />
-      <Card
-        titleName="Oliver"
-        qualiItems={["game design", "programming"]}
-        image="/oliverLeikWeb.png"
-      />
-    </div>
-    <div class="flex flex-col md:flex-row justify-between mt-10">
-      <Card
-        titleName="Jaran"
-        qualiItems={["3D modeling/animation"]}
-        image="/jaranLeikWeb.png"
-      />
-      <Card
-        titleName="Anniken"
-        qualiItems={["3D modeling"]}
-        image="/annikenLeikWeb.png"
-      />
-    </div>
-    <div class="flex flex-col md:flex-row justify-center mt-10">
-      <Card
-        titleName="Simen"
-        qualiItems={["audio", "music"]}
-        image="/simenLeikWeb.png"
-      />
-    </div>
+    <main>
+        <h1 class="mt-20 mb-10 text-center text-4xl font-['Josefin_Sans_Variable']">
+            LEIK<br />GAMES
+        </h1>
+        <div class="flex flex-col md:flex-row justify-between">
+            <Card
+                titleName="Camilla"
+                qualiItems={['game design', '2D art']}
+                image="/camillaLeikWeb.png"
+            />
+            <Card
+                titleName="Oliver"
+                qualiItems={['game design', 'programming']}
+                image="/oliverLeikWeb.png"
+            />
+        </div>
+        <div class="flex flex-col md:flex-row justify-between mt-10">
+            <Card
+                titleName="Jaran"
+                qualiItems={['3D modeling/animation']}
+                image="/jaranLeikWeb.png"
+            />
+            <Card titleName="Anniken" qualiItems={['3D modeling']} image="/annikenLeikWeb.png" />
+        </div>
+        <div class="flex flex-col md:flex-row justify-center mt-10">
+            <Card titleName="Simen" qualiItems={['audio', 'music']} image="/simenLeikWeb.png" />
+        </div>
         <div class="my-20 flex flex-row justify-around">
-
-            <Social icon="material-symbols:mail-sharp" href="mailto:hello@leik.games" color="text-black">
+            <Social
+                icon="material-symbols:mail-sharp"
+                href="mailto:hello@leik.games"
+                color="text-black"
+            >
                 hello@leik.games
             </Social>
 
-            <Social icon="material-symbols:location-on" href="https://maps.app.goo.gl/BoLTFi2WSAYsCvou5" color="text-black">
+            <Social
+                icon="material-symbols:location-on"
+                href="https://maps.app.goo.gl/BoLTFi2WSAYsCvou5"
+                color="text-black"
+            >
                 Nygaardsgata 33 A 1607 Fredrikstad
             </Social>
 
-            <Social icon="carbon:logo-discord" href="https://discord.gg/MVjVFpv3" color="text-black">
-                Join our Discord
-            </Social>
+            <!-- <Social -->
+            <!--     icon="carbon:logo-discord" -->
+            <!--     href="https://discord.gg/MVjVFpv3" -->
+            <!--     color="text-black" -->
+            <!-- > -->
+            <!--     Join our Discord -->
+            <!-- </Social> -->
 
-            <Social icon="mdi:blog" href="https://forums.tigsource.com/index.php?topic=75659.0" color="text-black">
+            <Social
+                icon="mdi:blog"
+                href="https://forums.tigsource.com/index.php?topic=75659.0"
+                color="text-black"
+            >
                 Dicetris devlog
             </Social>
         </div>
-  </main>
+    </main>
 </Layout>
 
 <style>
-  main {
-    margin: auto;
-    padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
-    color: black;
-    font-size: 12pt;
-    line-height: 1.4;
-  }
+    main {
+        margin: auto;
+        padding: 1rem;
+        width: 800px;
+        max-width: calc(100% - 2rem);
+        color: black;
+        font-size: 12pt;
+        line-height: 1.4;
+    }
 </style>
