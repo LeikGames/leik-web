@@ -1,105 +1,104 @@
 ---
 import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/Navbar.astro'
 import Card from '../components/Card.astro'
 import Social from '../components/Social.astro'
 ---
 
 <Layout title="Leik Games">
-    <main>
-        <h1 class="mt-20 mb-10 text-center text-4xl font-['Josefin_Sans_Variable']">
-            LEIK<br />GAMES
-        </h1>
-        <!-- <div class="my-20 text-center"> -->
-        <!--     <h2 class="text-2xl font-['Josefin_Sans_Variable']">DIY: Games</h2> -->
-        <!--     <p class="text-xl"> -->
-        <!--         DIY: Games er en spillskole som arrangeres i oktober og november. Deltakerne kan -->
-        <!--         velge mellom fire spennende kursretninger: programmering, 3D-modellering, 2D pixel -->
-        <!--         art og lyddesign. -->
-        <!--     </p> -->
-        <!--     <p class="text-xl"> -->
-        <!--         Sjekk ut mer på <a -->
-        <!--             href="https://www.spillskole.no/" -->
-        <!--             class="text-blue-600 visited:text-purple-600">spillskole.no</a -->
-        <!--         > -->
-        <!--     </p> -->
-        <!-- </div> -->
-        <div class="my-20 text-center">
-            <h2 class="text-3xl font-['Josefin_Sans_Variable']">Dicetris</h2>
-            <p class="text-2xl">Dicetris er ute på CrazyGames nå!</p>
-            <p class="text-2xl">
-                Sjekk ut mer på <a
-                    href="https://www.dicetrisgame.com/"
-                    class="text-blue-600 visited:text-purple-600">dicetrisgame.com</a
-                >
-            </p>
-        </div>
-        <div class="flex flex-col md:flex-row justify-between">
-            <Card
-                titleName="Camilla"
-                qualiItems={['game design', '2D art']}
-                image="/camillaLeikWeb.png"
-            />
-            <Card
-                titleName="Oliver"
-                qualiItems={['game design', 'programming']}
-                image="/oliverLeikWeb.png"
-            />
-        </div>
-        <div class="flex flex-col md:flex-row justify-between mt-10">
-            <Card
-                titleName="Jaran"
-                qualiItems={['3D modeling/animation']}
-                image="/jaranLeikWeb.png"
-            />
-            <Card titleName="Anniken" qualiItems={['3D modeling']} image="/annikenLeikWeb.png" />
-        </div>
-        <div class="flex flex-col md:flex-row justify-center mt-10">
-            <Card titleName="Simen" qualiItems={['audio', 'music']} image="/simenLeikWeb.png" />
-        </div>
-        <div class="my-20 flex flex-row justify-around">
-            <Social
-                icon="material-symbols:mail-sharp"
-                href="mailto:hello@leik.games"
-                color="text-black"
-            >
-                hello@leik.games
-            </Social>
+    <div class="container">
+        <header class="container pt-5">
+            <h1 class="pt-5 pb-5 text-center display-1">LEIK GAMES</h1>
+            <Navbar />
+        </header>
+        <main class="text-center">
+            <div data-bs-spy="scroll" data-bs-target="#my-navbar" data-bs-offset="0" tabindex="0">
+                <div id="home" class="hidden"></div>
+                <div id="about" class="container my-5">
+                    <h2 class="display-3">About</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel maximus
+                        nisl, non dignissim ipsum. Donec ut magna non enim finibus facilisis sit
+                        amet ut erat. Vivamus sit amet urna ultricies, viverra metus ut, eleifend
+                        eros. Morbi volutpat faucibus felis sed euismod. Nunc id mauris vel metus
+                        dignissim tristique vitae quis enim. Nunc velit nisl, fringilla auctor
+                        posuere vel, fermentum at justo. Vivamus diam metus, tempus id blandit a,
+                        faucibus et nisi. Duis blandit congue sapien, sit amet elementum dolor
+                        tristique in. Donec est orci, dignissim at ultricies ac, vestibulum sagittis
+                        lorem. In id tortor quis massa iaculis finibus ut eu arcu. Aliquam aliquam
+                        finibus vehicula. Mauris viverra, sem tempus accumsan dictum, libero ipsum
+                        fermentum mauris, in consectetur nulla ligula vel sem. Mauris sed ipsum
+                        consectetur, commodo mauris ut, venenatis eros. Suspendisse vel dolor id
+                        elit cursus iaculis ac ac turpis. Vestibulum luctus fringilla orci, vitae
+                        dignissim tortor tempus et. Mauris pretium risus ac sagittis suscipit. Sed
+                        mauris lacus, posuere quis eros id, tincidunt commodo eros. Etiam suscipit
+                        mi ligula, non faucibus lectus gravida sed. Vivamus eget tortor eu ligula
+                        cursus pharetra. Praesent tincidunt nisi dui, a maximus velit vulputate a.
+                        Ut luctus accumsan sem, vitae dapibus massa pretium sed. In ultrices mi nec
+                        iaculis semper.
+                    </p>
+                </div>
+                <div id="games" class="container my-5">
+                    <h2 class="display-3">Games</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel maximus
+                        nisl, non dignissim ipsum. Donec ut magna non enim finibus facilisis sit
+                        amet ut erat. Vivamus sit amet urna ultricies, viverra metus ut, eleifend
+                        eros. Morbi volutpat faucibus felis sed euismod. Nunc id mauris vel metus
+                        dignissim tristique vitae quis enim. Nunc velit nisl, fringilla auctor
+                        posuere vel, fermentum at justo. Vivamus diam metus, tempus id blandit a,
+                        faucibus et nisi. Duis blandit congue sapien, sit amet elementum dolor
+                        tristique in. Donec est orci, dignissim at ultricies ac, vestibulum sagittis
+                        lorem. In id tortor quis massa iaculis finibus ut eu arcu. Aliquam aliquam
+                        finibus vehicula. Mauris viverra, sem tempus accumsan dictum, libero ipsum
+                        fermentum mauris, in consectetur nulla ligula vel sem. Mauris sed ipsum
+                        consectetur, commodo mauris ut, venenatis eros. Suspendisse vel dolor id
+                        elit cursus iaculis ac ac turpis. Vestibulum luctus fringilla orci, vitae
+                        dignissim tortor tempus et. Mauris pretium risus ac sagittis suscipit. Sed
+                        mauris lacus, posuere quis eros id, tincidunt commodo eros. Etiam suscipit
+                        mi ligula, non faucibus lectus gravida sed. Vivamus eget tortor eu ligula
+                        cursus pharetra. Praesent tincidunt nisi dui, a maximus velit vulputate a.
+                        Ut luctus accumsan sem, vitae dapibus massa pretium sed. In ultrices mi nec
+                        iaculis semper.
+                    </p>
+                </div>
+                <div id="contact" class="container my-5">
+                    <h2 class="display-3">Contact</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer vel maximus
+                        nisl, non dignissim ipsum. Donec ut magna non enim finibus facilisis sit
+                        amet ut erat. Vivamus sit amet urna ultricies, viverra metus ut, eleifend
+                        eros. Morbi volutpat faucibus felis sed euismod. Nunc id mauris vel metus
+                        dignissim tristique vitae quis enim. Nunc velit nisl, fringilla auctor
+                        posuere vel, fermentum at justo. Vivamus diam metus, tempus id blandit a,
+                        faucibus et nisi. Duis blandit congue sapien, sit amet elementum dolor
+                        tristique in. Donec est orci, dignissim at ultricies ac, vestibulum sagittis
+                        lorem. In id tortor quis massa iaculis finibus ut eu arcu. Aliquam aliquam
+                        finibus vehicula. Mauris viverra, sem tempus accumsan dictum, libero ipsum
+                        fermentum mauris, in consectetur nulla ligula vel sem. Mauris sed ipsum
+                        consectetur, commodo mauris ut, venenatis eros. Suspendisse vel dolor id
+                        elit cursus iaculis ac ac turpis. Vestibulum luctus fringilla orci, vitae
+                        dignissim tortor tempus et. Mauris pretium risus ac sagittis suscipit. Sed
+                        mauris lacus, posuere quis eros id, tincidunt commodo eros. Etiam suscipit
+                        mi ligula, non faucibus lectus gravida sed. Vivamus eget tortor eu ligula
+                        cursus pharetra. Praesent tincidunt nisi dui, a maximus velit vulputate a.
+                        Ut luctus accumsan sem, vitae dapibus massa pretium sed. In ultrices mi nec
+                        iaculis semper.
+                    </p>
+                </div>
+            </div>
+        </main>
+    </div>
 
-            <Social
-                icon="material-symbols:location-on"
-                href="https://maps.app.goo.gl/BoLTFi2WSAYsCvou5"
-                color="text-black"
-            >
-                Nygaardsgata 33 A 1607 Fredrikstad
-            </Social>
-
-            <!-- <Social -->
-            <!--     icon="carbon:logo-discord" -->
-            <!--     href="https://discord.gg/MVjVFpv3" -->
-            <!--     color="text-black" -->
-            <!-- > -->
-            <!--     Join our Discord -->
-            <!-- </Social> -->
-
-            <Social
-                icon="mdi:blog"
-                href="https://forums.tigsource.com/index.php?topic=75659.0"
-                color="text-black"
-            >
-                Dicetris devlog
-            </Social>
-        </div>
-    </main>
+    <style>
+        main {
+            margin: auto;
+            padding: 1rem;
+            width: 800px;
+            max-width: calc(100% - 2rem);
+            color: black;
+            font-size: 12pt;
+            line-height: 1.4;
+        }
+    </style>
 </Layout>
-
-<style>
-    main {
-        margin: auto;
-        padding: 1rem;
-        width: 800px;
-        max-width: calc(100% - 2rem);
-        color: black;
-        font-size: 12pt;
-        line-height: 1.4;
-    }
-</style>

@@ -4,6 +4,9 @@ import '@fontsource-variable/josefin-sans'
 
 import Navbar from '../components/Navbar.astro'
 
+import '../styles/bootstrap.scss'
+import '../styles/main.scss'
+
 interface Props {
     title: string
     description?: string
@@ -18,26 +21,41 @@ const { title, description = 'Leik Games are making games in Norway', image } = 
     <head>
         <meta charset="UTF-8" />
         <meta name="description" content={description} />
-        <meta name="viewport" content="width=device-width" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="generator" content={Astro.generator} />
         <meta property="og:image" content={image} />
+        <!-- Google Tag Manager -->
+        <script is:inline>
+            ;(function (w, d, s, l, i) {
+                w[l] = w[l] || []
+                w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' })
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != 'dataLayer' ? '&l=' + l : ''
+                j.async = true
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl
+                f.parentNode.insertBefore(j, f)
+            })(window, document, 'script', 'dataLayer', 'GTM-T39WSWW6')
+        </script>
+        <!-- End Google Tag Manager -->
         <title>{title}</title>
     </head>
     <body class="min-h-screen">
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-T39WSWW6"
+                height="0"
+                width="0"
+                style="display:none;visibility:hidden"></iframe></noscript
+        >
+        <!-- End Google Tag Manager (noscript) -->
         <div id="bg-div"></div>
-        <!-- <Navbar /> -->
-        <slot/>
+        <slot />
+        <script>
+            // Import everything
+            import 'bootstrap/dist/js/bootstrap'
+        </script>
     </body>
 </html>
-
-<style>
-    #bg-div {
-        position: fixed;
-        width: 100vw;
-        height: 75vh;
-        z-index: -10;
-        background: rgb(232, 239, 152);
-        background: linear-gradient(180deg, rgba(232, 239, 152, 1) 0%, rgba(255, 255, 255, 1) 100%);
-    }
-</style>

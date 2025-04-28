@@ -1,0 +1,10 @@
+@import 'variables.scss';
+
+#bg-div {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  background: $background-color;
+  background: linear-gradient(180deg, $background-color 0%, lighten($background-color, 10%) 100%);
+}
