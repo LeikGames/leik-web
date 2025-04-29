@@ -1,0 +1,20 @@
+---
+interface Props {
+    addStyle?: string
+}
+
+const { addStyle } = Astro.props
+
+import { slide, fade } from 'astro:transitions'
+---
+
+<div class={addStyle + ' py-5 '} transition:name="title" transition:animate="fade">
+    <div class="container pb-0 mb-0 pt-5">
+        <p class="lead">We are</p>
+    </div>
+    <h1 class="text-center display-1 mt-0 pt-0">
+        <a class="text-decoration-none text-reset" href="/">LEIK GAMES</a>
+    </h1>
+</div>
+
+<style></style>

@@ -3,37 +3,29 @@ import Layout from '../layouts/Layout.astro'
 import { Icon } from 'astro-icon/components'
 import Navbar from '../components/Navbar.astro'
 import { slide, fade } from 'astro:transitions'
+import Title from '../components/Title.astro'
 ---
 
 <Layout title="Leik Games">
     <div class="container">
         <main class="text-center vh-100">
-            <h1 class="pt-5 pb-5 h-25 text-center display-1" transition:name="title">LEIK GAMES</h1>
+            <Title addStyle="h-25" />
             <div class="container py-5 h-50 d-flex justify-content-between flex-column">
-                <a
-                    class="text-decoration-none text-reset fs-3"
-                    href="/games"
-                    transition:name="games-link"
-                    >Games <Icon
-                        name="material-symbols:arrow-circle-right-rounded"
-                        width="24"
-                        height="24"
-                    /></a
-                >
-                <a
-                    class="text-decoration-none text-reset fs-3"
-                    href="/about"
-                    transition:name="about-link"
+                <a class="text-decoration-none text-reset fs-3" href="/about"
                     >About us <Icon
                         name="material-symbols:arrow-circle-right-rounded"
                         width="24"
                         height="24"
                     /></a
                 >
-                <a
-                    class="text-decoration-none text-reset fs-3"
-                    href="/contact"
-                    transition:name="contact-link"
+                <a class="text-decoration-none text-reset fs-3" href="/games"
+                    >Games <Icon
+                        name="material-symbols:arrow-circle-right-rounded"
+                        width="24"
+                        height="24"
+                    /></a
+                >
+                <a class="text-decoration-none text-reset fs-3" href="/contact"
                     >Contact <Icon
                         name="material-symbols:arrow-circle-right-rounded"
                         width="24"
