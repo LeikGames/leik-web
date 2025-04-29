@@ -7,6 +7,8 @@ import Navbar from '../components/Navbar.astro'
 import '../styles/bootstrap.scss'
 import '../styles/main.scss'
 
+import { ClientRouter } from 'astro:transitions'
+
 interface Props {
     title: string
     description?: string
@@ -40,6 +42,7 @@ const { title, description = 'Leik Games are making games in Norway', image } = 
         </script>
         <!-- End Google Tag Manager -->
         <title>{title}</title>
+        <ClientRouter />
     </head>
     <body class="min-h-screen">
         <!-- Google Tag Manager (noscript) -->
@@ -57,5 +60,21 @@ const { title, description = 'Leik Games are making games in Norway', image } = 
             // Import everything
             import 'bootstrap/dist/js/bootstrap'
         </script>
+        <style is:global>
+            @keyframes bump {
+                0% {
+                    opacity: 0;
+                    transform: scale(1);
+                }
+                50% {
+                    opacity: 0.5;
+                    transform: scale(1.1);
+                }
+                100% {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+            }
+        </style>
     </body>
 </html>

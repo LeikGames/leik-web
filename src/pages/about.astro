@@ -1,0 +1,71 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import Navbar from '../components/Navbar.astro'
+---
+
+<Layout title="Leik Games">
+    <div class="container">
+        <main class="text-center vh-100">
+            <div class="container pb-3 pt-5">
+                <p class="lead">We are Leik Games</p>
+            </div>
+            <h1 class="py-3 text-center display-1" transition:name="title">
+                <a class="text-decoration-none text-reset" href="/">LEIK GAMES</a>
+            </h1>
+            <Navbar />
+            <hr />
+            <div class="container">
+                <div class="row pb-md-0 pb-5 justify-content-center">
+                    <div class="col-sm-5">
+                        <Card
+                            titleName="Camilla"
+                            image="/camillaLeikWeb.png"
+                            qualiItems={['Game designer', '2D artist']}
+                        >
+                            About Camilla
+                        </Card>
+                    </div>
+                    <div class="col-sm-5">
+                        <Card
+                            titleName="Oliver"
+                            image="/oliverLeikWeb.png"
+                            qualiItems={['Game designer', 'Programmer']}
+                        >
+                            About Oliver
+                        </Card>
+                    </div>
+                </div>
+                <div class="row pt-md-0 pt-5 justify-content-center">
+                    <div class="col-sm-4">
+                        <Card
+                            titleName="Anniken"
+                            image="/annikenLeikWeb.png"
+                            qualiItems={['Art Director', '3D artist']}
+                        >
+                            About Anniken
+                        </Card>
+                    </div>
+                    <div class="col-sm-4">
+                        <Card
+                            titleName="Jaran"
+                            image="/jaranLeikWeb.png"
+                            qualiItems={['3D artist', 'Technical artist']}
+                        >
+                            About Jaran
+                        </Card>
+                    </div>
+                    <div class="col-sm-4">
+                        <Card
+                            titleName="Michael"
+                            image="/simenLeikWeb.png"
+                            qualiItems={['3D artist']}
+                        >
+                            About Michael
+                        </Card>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+</Layout>

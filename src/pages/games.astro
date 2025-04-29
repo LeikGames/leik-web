@@ -1,0 +1,22 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import Navbar from '../components/Navbar.astro'
+---
+
+<Layout title="Leik Games">
+    <div class="container">
+        <main class="text-center vh-100">
+            <h1 class="py-3 text-center display-1" transition:name="title">
+                <a class="text-decoration-none text-reset" href="/">LEIK GAMES</a>
+            </h1>
+            <Navbar />
+            <hr />
+            <div class="container my-4">
+                <img src="/dicetris.png" class="img-fluid" />
+                <p class="lead pt-4">About dicetris</p>
+                <p><a href="https://www.dicetrisgame.com/">Try it here!</a></p>
+            </div>
+        </main>
+    </div>
+</Layout>

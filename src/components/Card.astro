@@ -8,10 +8,10 @@ interface Props {
 const { titleName, qualiItems, image } = Astro.props
 ---
 
-<div class="text-center text-2xl">
-    <img class="mt-2 max-w-80" src={image} />
-    <h2 class="mb-2 text-3xl">{titleName}</h2>
-    <ul>
+<div class="text-center">
+    <img class="mt-2 img-fluid" src={image} />
+    <h2 class="mb-2 display-6">{titleName}</h2>
+    <ul class="list-unstyled">
         {qualiItems.map((item) => <li>{item}</li>)}
     </ul>
 </div>
