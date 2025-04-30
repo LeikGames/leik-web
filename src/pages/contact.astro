@@ -113,7 +113,6 @@ import Title from '../components/Title.astro'
                 buttonSpinner.classList.remove('d-none')
                 submitButton.disabled = true
 
-                console.log(json)
                 fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
                     headers: {
