@@ -2,18 +2,16 @@
 interface Props {}
 
 const {} = Astro.props
-
-import { slide, fade } from 'astro:transitions'
 ---
 
-<nav id="my-navbar" class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 w-50 justify-content-between">
+<nav id="my-navbar" class="navbar navbar-expand">
+    <div class="container text-center">
+        <ul class="navbar-nav mx-auto mb-2 w-50 justify-content-between">
             <li class="nav-item">
                 <a class="nav-link" href="/games" transition:name="games-link">Games</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/about" transition:name="about-link">About us</a>
+                <a class="nav-link" href="/about" transition:name="about-link">About</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/contact" transition:name="contact-link">Contact</a>

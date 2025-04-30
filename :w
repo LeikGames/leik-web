@@ -1,0 +1,43 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import Navbar from '../components/Navbar.astro'
+import Title from '../components/Title.astro'
+---
+
+<Layout title="Leik Games">
+    <div class="container">
+        <main class="vh-100">
+            <Title />
+            <Navbar />
+            <hr />
+            <div class="container row">
+                <div class="container col-4">
+                    <h2 class="display-2 mb-4 text-center">Get in touch!</h2>
+                </div>
+                <div class="container col-4">
+                    <form>
+                        <div class="mb-3">
+                            <label for="inputName" class="form-label">Your name</label>
+                            <input type="text" class="form-control" id="inputName" />
+                            <div id="nameHelp" class="form-text">
+                                What do you like to be called?
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Your email address</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="inputEmail"
+                                aria-describedby="emailHelp"
+                            />
+                            <div id="emailHelp" class="form-text">How do we get in touch back?</div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</Layout>

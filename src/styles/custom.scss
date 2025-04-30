@@ -1,3 +1,5 @@
+@import 'variables.scss';
+
 // Required functions import
 @import 'bootstrap/scss/functions';
 
@@ -53,3 +55,5 @@
 
 // Optional utilities
 @import 'bootstrap/scss/utilities/api';
+
+@import 'main.scss';

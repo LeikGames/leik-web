@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.3.1",
+    "@astrojs/vercel": "^8.1.4",
     "@fontsource-variable/josefin-sans": "^5.0.20",
     "@fontsource/farsan": "^5.0.19",
     "@iconify-json/carbon": "^1.1.31",

@@ -1,0 +1,153 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Card from '../components/Card.astro'
+import Navbar from '../components/Navbar.astro'
+import Title from '../components/Title.astro'
+---
+
+<Layout title="Leik Games">
+    <div class="container">
+        <main class="vh-100">
+            <Title />
+            <Navbar />
+            <hr />
+            <div class="container mx-auto pt-4 row justify-content-evenly">
+                <div class="col-sm-4">
+                    <h2 class="display-2 text-center">Get in touch!</h2>
+                </div>
+                <div class="col-sm-4">
+                    <form
+                        action="https://api.web3forms.com/submit"
+                        method="POST"
+                        id="form"
+                        data-astro-reload
+                    >
+                        <input
+                            type="hidden"
+                            name="access_key"
+                            value="5140ac89-d88d-40d7-9323-5d02e6ba000f"
+                        />
+
+                        <input
+                            type="checkbox"
+                            class="hidden"
+                            style="display:none"
+                            name="botcheck"
+                        />
+
+                        <div class="mb-3">
+                            <label for="inputName" class="form-label">Your name</label>
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="inputName"
+                                aria-describedby="nameHelp"
+                                name="name"
+                                required
+                            />
+                            <div id="nameHelp" class="form-text">
+                                What do you like to be called?
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputEmail" class="form-label">Your email address</label>
+                            <input
+                                type="email"
+                                class="form-control"
+                                id="inputEmail"
+                                aria-describedby="emailHelp"
+                                name="email"
+                                required
+                            />
+                            <div id="emailHelp" class="form-text">How do we get in touch back?</div>
+                        </div>
+                        <div class="mb-3">
+                            <textarea
+                                name="message"
+                                required
+                                placeholder="Your Message"
+                                class="form-control"
+                                rows="3"></textarea>
+
+                            <div class="invalid-feedback">
+                                Please enter a message in the textarea.
+                            </div>
+                        </div>
+                        <button id="submitButton" type="submit" class="btn btn-primary">
+                            <span
+                                id="buttonSpinner"
+                                class="spinner-border spinner-border-sm d-none"
+                                role="status"
+                                aria-hidden="true"></span>
+                            Submit</button
+                        >
+
+                        <div id="result" class="alert mt-3" role="alert"></div>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+</Layout>
+
+<script is:inline>
+    document.addEventListener(
+        'astro:page-load',
+        () => {
+            const form = document.getElementById('form')
+            const result = document.getElementById('result')
+            const submitButton = document.getElementById('submitButton')
+            const buttonSpinner = document.getElementById('buttonSpinner')
+
+            form.addEventListener('submit', function (e) {
+                e.preventDefault()
+                form.classList.add('was-validated')
+                if (!form.checkValidity()) {
+                    form.querySelectorAll(':invalid')[0].focus()
+                    return
+                }
+                const formData = new FormData(form)
+                const object = Object.fromEntries(formData)
+                const json = JSON.stringify(object)
+
+                buttonSpinner.classList.remove('d-none')
+                submitButton.disabled = true
+
+                console.log(json)
+                fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Accept: 'application/json',
+                    },
+                    body: json,
+                })
+                    .then(async (response) => {
+                        let json = await response.json()
+                        submitButton.disabled = false
+                        buttonSpinner.classList.add('d-none')
+                        if (response.status == 200) {
+                            result.classList.add('alert-success')
+                            result.innerHTML = json.message
+                        } else {
+                            console.log(response)
+                            result.classList.add('alert-danger')
+                            result.innerHTML = json.message
+                        }
+                    })
+                    .catch((error) => {
+                        console.log(error)
+                        result.innerHTML = 'Something went wrong!'
+                    })
+                    .then(function () {
+                        form.reset()
+                        form.classList.remove('was-validated')
+                        setTimeout(() => {
+                            result.style.display = 'none'
+                        }, 5000)
+                    })
+            })
+        },
+        { once: true }
+    )
+</script>
