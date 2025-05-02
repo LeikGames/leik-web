@@ -5,22 +5,20 @@ import Title from '../components/Title.astro'
 ---
 
 <Layout title="Leik Games">
-    <div class="container">
-        <main class="vh-100">
-            <Title addStyle="pb-5" big />
-            <div
-                class="container text-center w-lg-25 w-50 py-5 h-50 d-flex justify-content-between flex-column"
+    <main class="container">
+        <Title addStyle="pb-5" big />
+        <div
+            class="container text-center w-lg-25 w-50 py-5 h-50 d-flex justify-content-between flex-column"
+        >
+            <a class="text-reset mx-auto icon-link icon-link-hover fs-3 my-5" href="/about"
+                >About us<Icon name="mdi:arrow-right-circle" class="bi" aria-hidden="true" /></a
             >
-                <a class="text-decoration-none text-reset fs-3 my-5" href="/about"
-                    >About us <Icon name="mdi:arrow-right-circle" width="24" height="24" /></a
-                >
-                <a class="text-decoration-none text-reset fs-3 my-5" href="/games"
-                    >Games <Icon name="mdi:arrow-right-circle" width="24" height="24" /></a
-                >
-                <a class="text-decoration-none text-reset fs-3 my-5" href="/contact"
-                    >Contact <Icon name="mdi:arrow-right-circle" width="24" height="24" /></a
-                >
-            </div>
-        </main>
-    </div>
+            <a class="text-reset mx-auto icon-link icon-link-hover fs-3 my-5" href="/games"
+                >Games<Icon name="mdi:arrow-right-circle" class="bi" aria-hidden="true" /></a
+            >
+            <a class="text-reset mx-auto icon-link icon-link-hover fs-3 my-5" href="/contact"
+                >Contact<Icon name="mdi:arrow-right-circle" class="bi" aria-hidden="true" /></a
+            >
+        </div>
+    </main>
 </Layout>

@@ -6,83 +6,77 @@ import Footer from '../components/Footer.astro'
 ---
 
 <Layout title="Leik Games">
-    <div class="container">
-        <main>
-            <Title />
-            <Navbar />
-            <hr />
-            <div class="container mx-auto pt-4 row justify-content-evenly">
-                <div class="col-sm-4">
-                    <h2 class="display-2 text-center">Get in touch!</h2>
-                </div>
-                <div class="col-sm-4">
-                    <form
-                        action="https://api.web3forms.com/submit"
-                        method="POST"
-                        id="form"
-                        data-astro-reload
-                    >
-                        <input
-                            type="hidden"
-                            name="access_key"
-                            value="46f233e3-daa9-412f-bba2-a2caa8a5990f"
-                        />
-
-                        <input type="checkbox" class="d-none" name="botcheck" />
-
-                        <div class="mb-3">
-                            <label for="inputName" class="form-label">Your name</label>
-                            <input
-                                type="text"
-                                class="form-control"
-                                id="inputName"
-                                aria-describedby="nameHelp"
-                                name="name"
-                                required
-                            />
-                            <div id="nameHelp" class="form-text">
-                                What do you like to be called?
-                            </div>
-                        </div>
-                        <div class="mb-3">
-                            <label for="inputEmail" class="form-label">Your email address</label>
-                            <input
-                                type="email"
-                                class="form-control"
-                                id="inputEmail"
-                                aria-describedby="emailHelp"
-                                name="email"
-                                required
-                            />
-                            <div id="emailHelp" class="form-text">How do we get in touch back?</div>
-                        </div>
-                        <div class="mb-3">
-                            <textarea
-                                name="message"
-                                required
-                                placeholder="Your Message"
-                                class="form-control"
-                                rows="3"></textarea>
-
-                            <div class="invalid-feedback">
-                                Please enter a message in the textarea.
-                            </div>
-                        </div>
-                        <button id="submitButton" type="submit" class="btn btn-primary">
-                            <span
-                                id="buttonSpinner"
-                                class="spinner-border spinner-border-sm d-none"
-                                role="status"
-                                aria-hidden="true"></span>
-                            Submit</button
-                        >
-
-                        <div id="result" class="alert mt-3" role="alert"></div>
-                    </form>
-                </div>
+    <main class="container mb-5">
+        <Title />
+        <Navbar />
+        <hr />
+        <div class="container mx-auto pt-4 row justify-content-evenly">
+            <div class="col-sm-4">
+                <h2 class="display-2 text-center">Get in touch!</h2>
             </div>
-        </main>
-    </div>
+            <div class="col-sm-4">
+                <form
+                    action="https://api.web3forms.com/submit"
+                    method="POST"
+                    id="form"
+                    data-astro-reload
+                >
+                    <input
+                        type="hidden"
+                        name="access_key"
+                        value="46f233e3-daa9-412f-bba2-a2caa8a5990f"
+                    />
+
+                    <input type="checkbox" class="d-none" name="botcheck" />
+
+                    <div class="mb-3">
+                        <label for="inputName" class="form-label">Your name</label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="inputName"
+                            aria-describedby="nameHelp"
+                            name="name"
+                            required
+                        />
+                        <div id="nameHelp" class="form-text">What do you like to be called?</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Your email address</label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="inputEmail"
+                            aria-describedby="emailHelp"
+                            name="email"
+                            required
+                        />
+                        <div id="emailHelp" class="form-text">How do we get in touch back?</div>
+                    </div>
+                    <div class="mb-3">
+                        <textarea
+                            name="message"
+                            required
+                            placeholder="Your Message"
+                            class="form-control"
+                            rows="3"></textarea>
+
+                        <div class="invalid-feedback">Please enter a message in the textarea.</div>
+                    </div>
+                    <button id="submitButton" type="submit" class="btn btn-primary">
+                        <span
+                            id="buttonSpinner"
+                            class="spinner-border spinner-border-sm d-none"
+                            role="status"
+                            aria-hidden="true"></span>
+                        Submit</button
+                    >
+
+                    <div id="result" class="alert mt-3" role="alert"></div>
+                </form>
+            </div>
+        </div>
+    </main>
     <Footer />
 </Layout>
 

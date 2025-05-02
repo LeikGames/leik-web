@@ -7,72 +7,69 @@ import Footer from '../components/Footer.astro'
 ---
 
 <Layout title="Leik Games">
-    <div class="container">
-        <main class="mb-5">
-            <Title />
-            <Navbar />
-            <hr />
-            <div class="container">
-                <div class="row pb-md-0 pb-5 justify-content-center">
-                    <div class="col-sm-4">
-                        <Card
-                            titleName="Camilla"
-                            image="/camillaLeikWeb.png"
-                            qualiItems={['Game designer', '2D artist']}
-                        >
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in risus
-                            quis neque laoreet lacinia sit amet vel justo. Phasellus semper justo id
-                            convallis pharetra.
-                        </Card>
-                    </div>
-                    <div class="col-sm-4">
-                        <Card
-                            titleName="Oliver"
-                            image="/oliverLeikWeb.png"
-                            qualiItems={['Game designer', 'Programmer']}
-                        >
-                            Integer tempor tempus nulla, a euismod risus porta vitae. Duis eu mi
-                            eget lacus efficitur hendrerit feugiat at est. Proin nec enim malesuada,
-                            maximus turpis consequat, cursus lectus.
-                        </Card>
-                    </div>
+    <main class="container mb-5">
+        <Title />
+        <Navbar />
+        <hr />
+        <div class="container py-4">
+            <div class="row pb-md-0 pb-5 justify-content-center">
+                <div class="col-sm-4">
+                    <Card
+                        titleName="Camilla"
+                        image="/camillaLeikWeb.png"
+                        qualiItems={['Game designer', '2D artist']}
+                    >
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut in risus quis
+                        neque laoreet lacinia sit amet vel justo. Phasellus semper justo id
+                        convallis pharetra.
+                    </Card>
                 </div>
-                <div class="row pt-md-0 pt-5 justify-content-center">
-                    <div class="col-sm-4">
-                        <Card
-                            titleName="Anniken"
-                            image="/annikenLeikWeb.png"
-                            qualiItems={['Art Director', '3D artist']}
-                        >
-                            Etiam vitae augue at turpis mattis aliquam. Quisque iaculis iaculis
-                            nisl, eget ultrices ante maximus at. Aenean quis orci sit amet sem
-                            efficitur vestibulum et ac ipsum.
-                        </Card>
-                    </div>
-                    <div class="col-sm-4">
-                        <Card
-                            titleName="Jaran"
-                            image="/jaranLeikWeb.png"
-                            qualiItems={['3D artist', 'Technical artist']}
-                        >
-                            Proin sit amet ipsum non risus tristique consequat. Curabitur tristique
-                            eros purus, ac hendrerit metus porttitor eu. Nunc nec dui nec enim
-                            tempus auctor.
-                        </Card>
-                    </div>
-                    <div class="col-sm-4">
-                        <Card
-                            titleName="Michael"
-                            image="/simenLeikWeb.png"
-                            qualiItems={['3D artist']}
-                        >
-                            Proin tristique quis quam a vehicula. Etiam sodales urna scelerisque,
-                            bibendum nisi vitae, tincidunt nisl. Sed egestas fermentum vehicula.
-                        </Card>
-                    </div>
+                <div class="col-sm-4">
+                    <Card
+                        titleName="Oliver"
+                        image="/oliverLeikWeb.png"
+                        qualiItems={['Game designer', 'Programmer']}
+                    >
+                        Integer tempor tempus nulla, a euismod risus porta vitae. Duis eu mi eget
+                        lacus efficitur hendrerit feugiat at est. Proin nec enim malesuada, maximus
+                        turpis consequat, cursus lectus.
+                    </Card>
                 </div>
             </div>
-        </main>
-    </div>
+            <div class="row pt-md-0 pt-5 justify-content-center">
+                <div class="col-sm-4">
+                    <Card
+                        titleName="Anniken"
+                        image="/annikenLeikWeb.png"
+                        qualiItems={['Art Director', '3D artist']}
+                    >
+                        Etiam vitae augue at turpis mattis aliquam. Quisque iaculis iaculis nisl,
+                        eget ultrices ante maximus at. Aenean quis orci sit amet sem efficitur
+                        vestibulum et ac ipsum.
+                    </Card>
+                </div>
+                <div class="col-sm-4">
+                    <Card
+                        titleName="Jaran"
+                        image="/jaranLeikWeb.png"
+                        qualiItems={['3D artist', 'Technical artist']}
+                    >
+                        Proin sit amet ipsum non risus tristique consequat. Curabitur tristique eros
+                        purus, ac hendrerit metus porttitor eu. Nunc nec dui nec enim tempus auctor.
+                    </Card>
+                </div>
+                <div class="col-sm-4">
+                    <Card
+                        titleName="Michael"
+                        image="/michaelLeikWeb.png"
+                        qualiItems={['Junior 3D artist']}
+                    >
+                        Proin tristique quis quam a vehicula. Etiam sodales urna scelerisque,
+                        bibendum nisi vitae, tincidunt nisl. Sed egestas fermentum vehicula.
+                    </Card>
+                </div>
+            </div>
+        </div>
+    </main>
     <Footer />
 </Layout>

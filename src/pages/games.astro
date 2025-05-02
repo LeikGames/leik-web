@@ -1,23 +1,43 @@
 ---
 import Layout from '../layouts/Layout.astro'
-import Card from '../components/Card.astro'
 import Navbar from '../components/Navbar.astro'
 import Title from '../components/Title.astro'
 import Footer from '../components/Footer.astro'
+
+import { Icon } from 'astro-icon/components'
 ---
 
 <Layout title="Leik Games">
-    <div class="container">
-        <main class="mb-5">
-            <Title />
-            <Navbar />
-            <hr />
-            <div class="container text-center my-4">
-                <img src="/dicetris.png" class="img-fluid" />
-                <p class="lead pt-4">About dicetris</p>
-                <p><a href="https://www.dicetrisgame.com/">Try it here!</a></p>
-            </div>
-        </main>
-    </div>
+    <main class="container mb-5">
+        <Title />
+        <Navbar />
+        <hr />
+        <div class="container py-4">
+            <section class="row">
+                <div class="col">
+                    <img src="/dicetris.png" class="img-fluid rounded" />
+                </div>
+                <div class="col">
+                    <h2>DICETRIS</h2>
+                    <p class="fs-5">
+                        Dicetris is a clever block-stacking puzzle game that challenges your math
+                        and strategy skills. Align falling dice to match the target sums at the
+                        bottom, using color combinations and stacking techniques to maximize your
+                        score. With each move, you’ll sharpen your thinking while chasing high
+                        scores in this engaging and unique puzzle experience.
+                    </p>
+                    <p class="fs-5">
+                        <a
+                            class="btn btn-outline-primary icon-link"
+                            href="https://www.dicetrisgame.com/"
+                            target="_blank"
+                            ><Icon name="uil:external-link-alt" class="bi" aria-hidden="true" />
+                            Try it here!</a
+                        >
+                    </p>
+                </div>
+            </section>
+        </div>
+    </main>
     <Footer />
 </Layout>
