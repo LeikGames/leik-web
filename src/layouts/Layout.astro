@@ -1,9 +1,4 @@
 ---
-import '@fontsource/farsan'
-import '@fontsource-variable/josefin-sans'
-
-import Footer from '../components/Footer.astro'
-
 import '../styles/custom.scss'
 
 import { ClientRouter } from 'astro:transitions'
@@ -43,7 +38,7 @@ const { title, description = 'Leik Games are making games in Norway', image } = 
         <title>{title}</title>
         <ClientRouter />
     </head>
-    <body class="min-h-screen">
+    <body class="d-flex flex-column min-vh-100">
         <!-- Google Tag Manager (noscript) -->
         <noscript
             ><iframe
@@ -57,7 +52,20 @@ const { title, description = 'Leik Games are making games in Norway', image } = 
         <slot />
         <script>
             // Import everything
-            import 'bootstrap/dist/js/bootstrap'
+            // import 'bootstrap/dist/js/bootstrap'
+            // Import only what you need
+            import 'bootstrap/js/dist/alert'
+            import 'bootstrap/js/dist/button'
+            // import 'bootstrap/js/dist/carousel';
+            // import 'bootstrap/js/dist/collapse';
+            // import 'bootstrap/js/dist/dropdown';
+            // import 'bootstrap/js/dist/modal';
+            // import 'bootstrap/js/dist/offcanvas';
+            // import 'bootstrap/js/dist/popover';
+            // import 'bootstrap/js/dist/scrollspy';
+            // import 'bootstrap/js/dist/tab';
+            // import 'bootstrap/js/dist/toast';
+            // import 'bootstrap/js/dist/tooltip';
         </script>
         <style is:global>
             @keyframes bump {

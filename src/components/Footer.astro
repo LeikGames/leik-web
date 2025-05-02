@@ -1,23 +1,82 @@
 ---
+import { Icon } from 'astro-icon/components'
+
 interface Props {}
 
 const {} = Astro.props
 ---
 
-<div class="container-fluid mx-0 py-5 bg-black text-light">
-    <div class="row justify-content-center">
-        <div class="col-10">
-            <h3 class="display-6">Leik Games</h3>
-            <ul class="list-unstyled">
-                <li>Nygaardsgata 36</li>
-                <li>1606 Fredrikstad</li>
-            </ul>
-            <ul class="list-unstyled">
-                <li>Org nr. 932 177 706</li>
-                <li><a href="mailto:hello@leik.games" class="text-light">hello@leik.games</a></li>
-            </ul>
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-black text-light mt-auto">
+    <div class="container text-center text-md-start mt-5 p-4">
+        <!-- Grid row -->
+        <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                <!-- Content -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                    <Icon name="leik-black" size="96" />
+                </h6>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">Social Media</h6>
+                <p>
+                    <a href="https://www.instagram.com/leik.games/" class="text-reset icon-link">
+                        <Icon name="uil:instagram" size="24" class="me-2" />Instagram
+                    </a>
+                </p>
+                <p>
+                    <a
+                        href="https://www.linkedin.com/company/leik-games/"
+                        class="text-reset icon-link"
+                    >
+                        <Icon name="uil:linkedin" size="24" class="me-2" />LinkedIn
+                    </a>
+                </p>
+                <p>
+                    <a href="https://github.com/LeikGames" class="text-reset icon-link">
+                        <Icon name="uil:github" size="24" class="me-2" />Github
+                    </a>
+                </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                <p>
+                    <a
+                        href="https://maps.app.goo.gl/Hypz7MgdDixAhbcu6"
+                        class="text-reset icon-link"
+                        target="_blank"
+                        ><Icon name="uil:home" class="me-2" />Nygaardsgata 36, 1607 Fredrikstad</a
+                    >
+                </p>
+                <p>
+                    <a href="mailto:hello@leik.games" class="text-reset icon-link"
+                        ><Icon name="uil:envelope" class="me-2" />hello@leik.games</a
+                    >
+                </p>
+                <p>
+                    <a
+                        href="https://www.proff.no/selskap/leik-games-as/fredrikstad/internettdesign-og-programmering/IFEZSX60C2C"
+                        class="text-reset icon-link"
+                        target="_blank"
+                        ><Icon name="uil:building" class="me-2" />Org nr. 932 177 706</a
+                    >
+                </p>
+                <!-- <p><Icon name="uil:phone" class="me-2" />+47 95 05 65 16</p> -->
+            </div>
+            <!-- Grid column -->
         </div>
+        <!-- Grid row -->
     </div>
-</div>
+</footer>
+<!-- Footer -->
 
 <style></style>

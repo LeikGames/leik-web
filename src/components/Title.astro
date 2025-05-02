@@ -4,7 +4,7 @@ interface Props {
     big?: boolean
 }
 
-const { addStyle, big } = Astro.props
+const { addStyle = '', big = false } = Astro.props
 
 let size = 'display-3'
 if (big) {
