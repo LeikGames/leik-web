@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro'
+import Navbar from '../components/Navbar.astro'
+import Title from '../components/Title.astro'
+import Footer from '../components/Footer.astro'
+import BlogPost from '../components/BlogPost.astro'
+
+// import { Icon } from 'astro-icon/components'
+
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }))
+---
+
+<Layout title="Leik Games — Blog">
+    <main class="container mb-5">
+        <Title />
+        <Navbar />
+        <hr />
+        <div class="container py-4">
+            <h2 class="display-2">News</h2>
+            <div class="row gy-4 mt-2">
+                {
+                    allPosts.map((post: any) => (
+                        <BlogPost
+                            title={post.frontmatter.title}
+                            author={post.frontmatter.author}
+                            link={post.url}
+                            description={post.frontmatter.description}
+                            date={post.frontmatter.pubDate}
+                            image_src={post.frontmatter.image.url}
+                            image_alt={post.frontmatter.image.alt}
+                        />
+                    ))
+                }
+            </div>
+        </div>
+    </main>
+    <Footer />
+</Layout>

@@ -6,3 +6,13 @@
   background: $background-color;
   background: linear-gradient(180deg, $background-color 0%, lighten($background-color, 10%) 100%);
 }
+
+.hover-up {
+  --bs-icon-link-transform: translate3d(-0.25rem, 0, 0);
+}
+
+.ratio-sm-21x9 {
+  @include media-breakpoint-up(md) {
+    --bs-aspect-ratio: calc(9 / 21 * 100%);
+  }
+}

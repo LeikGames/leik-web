@@ -9,7 +9,11 @@ interface Props {
     image?: string
 }
 
-const { title, description = 'Leik Games are making games in Norway', image } = Astro.props
+const {
+    title = 'Leik Games',
+    description = 'Leik Games are making games in Norway',
+    image,
+} = Astro.props
 ---
 
 <!doctype html>

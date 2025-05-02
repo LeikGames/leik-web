@@ -1,0 +1,29 @@
+---
+import Layout from './Layout.astro'
+import Navbar from '../components/Navbar.astro'
+import Title from '../components/Title.astro'
+import Footer from '../components/Footer.astro'
+const { frontmatter } = Astro.props
+
+const postDate = new Date(frontmatter.pubDate).toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+})
+---
+
+<Layout title={frontmatter.title}>
+    <main class="container mb-5">
+        <Title />
+        <Navbar />
+        <hr />
+        <div class="container py-4 col-8">
+            <img src={frontmatter.image.url} class="img-fluid mb-2" alt={frontmatter.image.alt} />
+            <h2 class="h1">{frontmatter.title}</h2>
+            <p>{postDate}</p>
+            <p>By: {frontmatter.author}</p>
+            <slot />
+        </div>
+    </main>
+    <Footer />
+</Layout>
