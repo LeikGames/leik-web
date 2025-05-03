@@ -40,7 +40,12 @@ const postDate = d.toLocaleDateString('en-US', {
     <!-- </div> -->
     <div class="card border-0">
         <div class="ratio ratio-16x9 ratio-sm-21x9">
-            <img src={image_src} class="card-img-top object-fit-cover" alt={image_alt} />
+            <img
+                src={image_src}
+                class="card-img-top object-fit-cover"
+                alt={image_alt}
+                transition:name={link}
+            />
         </div>
         <div class="card-body">
             <h5 class="card-title">{title}</h5>
