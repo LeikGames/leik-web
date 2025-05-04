@@ -1,4 +1,5 @@
 ---
+import NavbarLink from './NavbarLink.astro'
 interface Props {}
 
 const {} = Astro.props
@@ -8,16 +9,16 @@ const {} = Astro.props
     <div class="container text-center">
         <ul class="navbar-nav mx-auto mb-2 w-50 justify-content-between">
             <li class="nav-item">
-                <a class="nav-link" href="/blog" transition:name="blog-link">Blog</a>
+                <NavbarLink slug="blog">Blog</NavbarLink>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/about" transition:name="about-link">About</a>
+                <NavbarLink slug="about">About</NavbarLink>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/games" transition:name="games-link">Games</a>
+                <NavbarLink slug="games">Games</NavbarLink>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/contact" transition:name="contact-link">Contact</a>
+                <NavbarLink slug="contact">Contact</NavbarLink>
             </li>
         </ul>
     </div>
