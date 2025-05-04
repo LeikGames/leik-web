@@ -10,8 +10,6 @@ const { pathname } = Astro.url
 const isActive = pathname.slice(1).replace('/', '') === slug
 ---
 
-<Debug slug={slug} />
-<Debug pathname={pathname.slice(1)} />
 <div
     transition:name={isActive ? 'page-underline' : slug}
     class={(isActive ? 'bg-light shadow px-3' : 'px-2') + ' rounded-pill'}
