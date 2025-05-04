@@ -14,7 +14,7 @@ const isActive = pathname.slice(1).replace('/', '') === slug
     class={(isActive ? 'bg-light shadow px-3' : 'px-2') + ' rounded-pill'}
 >
     <a
-        class={(isActive ? 'active' : '') + ' nav-link'}
+        class={(isActive ? 'active' : '') + ' nav-link poppins-bold'}
         href={'/' + slug}
         transition:name={slug + '-link'}><slot /></a
     >

@@ -1,26 +1,18 @@
 ---
+import { Image } from 'astro:assets'
+
 interface Props {
     addStyle?: string
-    big?: boolean
 }
 
-const { addStyle = '', big = false } = Astro.props
-
-let size = 'display-3'
-if (big) {
-    size = 'display-1'
-}
+const { addStyle = '' } = Astro.props
 ---
 
-<div class={addStyle + ' pt-5'}>
-    <div class="container pb-0 mb-0 pt-5 text-center">
-        <p class="lead" transition:name="page_subtitle">We are</p>
-    </div>
-    <h1 class={size + ' text-center mt-0 pt-0'}>
-        <a class="text-decoration-none text-reset" href="/" transition:name="page_title"
-            >LEIK GAMES</a
-        >
-    </h1>
+<div class={addStyle + ' pt-5 mb-3 container col-5 col-sm-2'}>
+    <a href="/" transition:name="page_title"><img src="/logo.svg" class="mx-auto d-block" /></a>
+    <!-- <a class="text-decoration-none text-reset" href="/" transition:name="page_title" -->
+    <!--     >LEIK GAMES</a -->
+    <!-- > -->
 </div>
 
 <style></style>
