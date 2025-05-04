@@ -7,7 +7,7 @@ interface Props {
 const { slug } = Astro.props
 const { pathname } = Astro.url
 
-const isActive = pathname.slice(1) === slug
+const isActive = pathname.slice(1).replace('/', '') === slug
 ---
 
 <Debug slug={slug} />
