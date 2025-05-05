@@ -1,7 +1,7 @@
 ---
 layout: ../../layouts/BlogPostLayout.astro
 title: 'My First Blog Post'
-pubDate: 1746215250360
+pubDate: 1735712672000
 description: 'This is the first post of my new Astro blog.'
 author: 'Astro Learner'
 image:

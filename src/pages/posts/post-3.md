@@ -6,7 +6,7 @@ description: 'I had some challenges, but asking in the community really helped!'
 image:
     url: 'https://docs.astro.build/assets/rays.webp'
     alt: 'The Astro logo on a dark background with rainbow rays.'
-pubDate: 1744915250360
+pubDate: 1740810272000
 tags: ['astro', 'learning in public', 'setbacks', 'community']
 ---
 
