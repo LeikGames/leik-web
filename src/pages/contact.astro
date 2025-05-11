@@ -9,11 +9,11 @@ import Footer from '../components/Footer.astro'
     <main class="container mb-5">
         <Title />
         <Navbar />
-        <div class="container mx-auto pt-4 row justify-content-evenly">
-            <div class="col-sm-4">
+        <div class="container col-sm-10 mx-auto pt-4 row justify-content-evenly gy-4">
+            <div class="col-sm-6">
                 <h2 class="display-2 text-center">Get in touch!</h2>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-6">
                 <form
                     action="https://api.web3forms.com/submit"
                     method="POST"
@@ -36,9 +36,9 @@ import Footer from '../components/Footer.astro'
                             id="inputName"
                             aria-describedby="nameHelp"
                             name="name"
+                            placeholder="What do you like to be called?"
                             required
                         />
-                        <div id="nameHelp" class="form-text">What do you like to be called?</div>
                     </div>
                     <div class="mb-3">
                         <label for="inputEmail" class="form-label">Your email address</label>
@@ -48,9 +48,9 @@ import Footer from '../components/Footer.astro'
                             id="inputEmail"
                             aria-describedby="emailHelp"
                             name="email"
+                            placeholder="How do we get in touch back?"
                             required
                         />
-                        <div id="emailHelp" class="form-text">How do we get in touch back?</div>
                     </div>
                     <div class="mb-3">
                         <textarea
