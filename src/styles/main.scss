@@ -7,6 +7,15 @@
   /* background: linear-gradient(180deg, $background-color 0%, lighten($background-color, 10%) 100%); */
 }
 
+.index-nav {
+  text-decoration-color: rgba(0, 0, 0, 0);
+  transition: text-decoration-color 0.1s;
+
+  &:hover {
+    text-decoration-color: rgba(0, 0, 0, 1);
+  }
+}
+
 .hover-up {
   --bs-icon-link-transform: translate3d(-0.25rem, 0, 0);
 }
